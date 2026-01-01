@@ -1053,86 +1053,116 @@
           </div>
         </div>
         <!-- Right Side: Form -->
-        <form class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md" id="contactForm">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <div class="w-60 h-12 relative flex rounded-xl">
-              <input
-          required=""
-          class="peer w-full bg-transparent outline-none px-4 text-base rounded-xl  border border-[#4070f4] focus:shadow-md dark:bg-gray-900 dark:border-gray-700 dark:text-white"
-          id="firstname"
-          type="text"
-              />
-              <label
-          class="absolute top-1/2 translate-y-[-50%] bg-white left-4 px-2 peer-focus:top-0 peer-focus:left-3 font-light text-base peer-focus:text-sm peer-focus:text-[#4070f4] peer-valid:top-0 peer-valid:left-3 peer-valid:text-sm peer-valid:text-[#4070f4] duration-150 dark:bg-gray-900"
-          for="firstname"
-              >
-          First Name</label
-              >
+        <form
+          class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md flex flex-col"
+          id="contactForm"
+        >
+          <div class="flex gap-4 mb-4">
+            <!-- First Name -->
+            <div class="flex flex-col">
+              <div class="w-60 h-12 relative flex rounded-xl mb-2">
+                <input
+                  class="peer w-full bg-transparent outline-none px-4 text-base rounded-xl border border-[#4070f4] focus:shadow-md dark:bg-gray-900 dark:border-gray-700 dark:text-white"
+                  id="firstname"
+                  type="text"
+                  placeholder=" "
+                />
+                <label
+                  class="absolute top-1/2 translate-y-[-50%] bg-white left-4 px-2 font-light text-base duration-150 peer-focus:top-0 peer-focus:left-3 peer-focus:text-sm peer-focus:text-[#4070f4] peer-placeholder-shown:top-1/2 peer-placeholder-shown:left-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 dark:bg-gray-900"
+                  for="firstname"
+                  >First Name</label
+                >
+              </div>
+              <p id="firstnameError" class="text-red-400 text-xs mt-1 hidden pl-2">
+                First name is required.
+              </p>
             </div>
-            <div class="w-60 h-12 relative flex rounded-xl">
+
+            <!-- Last Name -->
+             <div class=" flex flex-col">
+            <div class="w-60 h-12 relative flex rounded-xl mb-2">
               <input
-          required=""
-          class="peer w-full bg-transparent outline-none px-4 text-base rounded-xl  border border-[#4070f4] focus:shadow-md dark:bg-gray-900 dark:border-gray-700 dark:text-white"
-          id="lastname"
-          type="text"
+                class="peer w-full bg-transparent outline-none px-4 text-base rounded-xl border border-[#4070f4] focus:shadow-md dark:bg-gray-900 dark:border-gray-700 dark:text-white"
+                id="lastname"
+                type="text"
+                placeholder=" "
               />
               <label
-          class="absolute top-1/2 translate-y-[-50%] bg-white left-4 px-2 peer-focus:top-0 peer-focus:left-3 font-light text-base peer-focus:text-sm peer-focus:text-[#4070f4] peer-valid:top-0 peer-valid:left-3 peer-valid:text-sm peer-valid:text-[#4070f4] duration-150 dark:bg-gray-900"
-          for="lastname"
+                class="absolute top-1/2 translate-y-[-50%] bg-white left-4 px-2 font-light text-base duration-150 peer-focus:top-0 peer-focus:left-3 peer-focus:text-sm peer-focus:text-[#4070f4] peer-placeholder-shown:top-1/2 peer-placeholder-shown:left-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 dark:bg-gray-900"
+                for="lastname"
+                >Last Name</label
               >
-          Last Name</label
-              >
+
+            </div>
+            <p id="lastnameError" class="text-red-400 text-xs mt-1 hidden pl-2">
+              Last name is required.
+            </p>
             </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-            <div class="w-60 h-12 relative flex rounded-xl">
-              <input
-          required=""
-          class="peer w-full bg-transparent outline-none px-4 text-base rounded-xl border border-[#4070f4] focus:shadow-md dark:bg-gray-900 dark:border-gray-700 dark:text-white"
-          id="email"
-          type="text"
-              />
-              <label
-          class="absolute top-1/2 translate-y-[-50%] bg-white left-4 px-2 peer-focus:top-0 peer-focus:left-3 font-light text-base peer-focus:text-sm peer-focus:text-[#4070f4] peer-valid:top-0 peer-valid:left-3 peer-valid:text-sm peer-valid:text-[#4070f4] duration-150 dark:bg-gray-900"
-          for="email"
-              >
-          Your Email...</label
-              >
-            </div>
-            <div class="w-60 h-12 relative flex rounded-xl">
-              <input
-          required=""
-          class="peer w-full bg-transparent outline-none px-4 text-base rounded-xl border border-[#4070f4] focus:shadow-md dark:bg-gray-900 dark:border-gray-700 dark:text-white"
-          id="phone"
-          type="text"
-              />
-              <label
-          class="absolute top-1/2 translate-y-[-50%] bg-white left-4 px-2 peer-focus:top-0 peer-focus:left-3 font-light text-base peer-focus:text-sm peer-focus:text-[#4070f4] peer-valid:top-0 peer-valid:left-3 peer-valid:text-sm peer-valid:text-[#4070f4] duration-150 dark:bg-gray-900"
-          for="phone"
-              >
-          Type phone number...</label
-              >
-            </div>
+           <div class="flex gap-4 mb-4">
+                      <!-- Email -->
+            <div>
+          <div class="w-60 h-12 relative flex rounded-xl mb-2">
+            <input
+              class="peer w-full bg-transparent outline-none px-4 text-base rounded-xl border border-[#4070f4] focus:shadow-md dark:bg-gray-900 dark:border-gray-700 dark:text-white"
+              id="email"
+              type="text"
+              placeholder=" "
+            />
+            <label
+              class="absolute top-1/2 translate-y-[-50%] bg-white left-4 px-2 font-light text-base duration-150 peer-focus:top-0 peer-focus:left-3 peer-focus:text-sm peer-focus:text-[#4070f4] peer-placeholder-shown:top-1/2 peer-placeholder-shown:left-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 dark:bg-gray-900"
+              for="email"
+              >Email Address</label
+            >
           </div>
-          <div class="mb-4 w-full">
-            <div class="w-full h-12 relative flex rounded-xl">
-              <input
-          required=""
-          class="peer w-full bg-transparent outline-none px-4 text-base rounded-xl border border-[#4070f4] focus:shadow-md dark:bg-gray-900 dark:border-gray-700 dark:text-white"
-          id="Subject"
-          type="text"
-              />
-              <label
-          class="absolute top-1/2 translate-y-[-50%] bg-white left-4 px-2 peer-focus:top-0 peer-focus:left-3 font-light text-base peer-focus:text-sm peer-focus:text-[#4070f4] peer-valid:top-0 peer-valid:left-3 peer-valid:text-sm peer-valid:text-[#4070f4] duration-150 dark:bg-gray-900"
-          for="Subject"
-              >
-          Type Subject...</label
-              >
-            </div>
+          <p id="emailError" class="text-red-400 text-xs mt-1 hidden pl-2">
+            Enter a valid email address.
+          </p>
           </div>
 
-          <div class="mb-6 relative">
+          <!-- Phone -->
+           <div>
+          <div class="w-60 h-12 relative flex rounded-xl mb-2">
+            <input
+              class="peer w-full bg-transparent outline-none px-4 text-base rounded-xl border border-[#4070f4] focus:shadow-md dark:bg-gray-900 dark:border-gray-700 dark:text-white"
+              id="phone"
+              type="text"
+              placeholder=" "
+            />
+            <label
+              class="absolute top-1/2 translate-y-[-50%] bg-white left-4 px-2 font-light text-base duration-150 peer-focus:top-0 peer-focus:left-3 peer-focus:text-sm peer-focus:text-[#4070f4] peer-placeholder-shown:top-1/2 peer-placeholder-shown:left-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 dark:bg-gray-900"
+              for="phone"
+              >Phone Number</label
+            >
+          </div>
+          <p id="phoneError" class="text-red-400 text-xs mt-1 hidden pl-2">
+            Enter a valid phone number.
+          </p>
+          </div>
+          </div>
+
+          <!-- Subject -->
+          <div class="w-110 h-12 relative flex rounded-xl mb-2">
+            <input
+              class="peer w-full bg-transparent outline-none px-4 text-base rounded-xl border border-[#4070f4] focus:shadow-md dark:bg-gray-900 dark:border-gray-700 dark:text-white"
+              id="subject"
+              type="text"
+              placeholder=" "
+            />
+            <label
+              class="absolute top-1/2 translate-y-[-50%] bg-white left-4 px-2 font-light text-base duration-150 peer-focus:top-0 peer-focus:left-3 peer-focus:text-sm peer-focus:text-[#4070f4] peer-placeholder-shown:top-1/2 peer-placeholder-shown:left-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 dark:bg-gray-900"
+              for="subject"
+              >Subject</label
+            >
+          </div>
+          <p id="subjectError" class="text-red-400 text-xs mt-1 hidden pl-2">
+            Subject is required.
+          </p>
+
+          <!-- Message -->
+           <div>
+          <div class="relative mt-3">
             <textarea
               id="message"
               rows="5"
@@ -1141,17 +1171,23 @@
             ></textarea>
             <label
               for="message"
-              class="absolute top-2 left-4 px-2 bg-white dark:bg-gray-900 font-light text-base text-gray-700 dark:text-gray-300 peer-placeholder-shown:top-2 peer-focus:top-0 peer-focus:text-sm peer-focus:text-[#4070f4] transition-all duration-150"
+              class="absolute top-2 left-4 px-2 bg-white dark:bg-gray-900 font-light text-base text-gray-700 dark:text-gray-300 transition-all duration-150 peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-0 peer-focus:text-sm peer-focus:text-[#4070f4]"
+              >Type messages...</label
             >
-              Type messages...
-            </label>
+          </div>
+          <p id="messageError" class="text-red-400 text-xs mt-1 hidden pl-2 mb-2">
+            Message cannot be empty.
+          </p>
           </div>
 
+          <!-- Submit -->
+           <div>
           <button
             class="bg-pink-600 hover:bg-pink-700 text-white font-semibold px-6 py-3 rounded-xl shadow transition flex items-center focus:shadow-md active:scale-95"
+            type="submit"
           >
             SEND MESSAGES <i class="fas fa-paper-plane ml-2"></i>
-          </button>
+          </button></div>
         </form>
       </div>
     </section>
@@ -1336,7 +1372,80 @@
         </div>
       </div>
     </div>
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          let valid = true;
 
+          // First Name
+          const firstname = document.getElementById("firstname");
+          const firstnameError = document.getElementById("firstnameError");
+          if (firstname.value.trim() === "") {
+            firstnameError.classList.remove("hidden");
+            valid = false;
+          } else {
+            firstnameError.classList.add("hidden");
+          }
+
+          // Last Name
+          const lastname = document.getElementById("lastname");
+          const lastnameError = document.getElementById("lastnameError");
+          if (lastname.value.trim() === "") {
+            lastnameError.classList.remove("hidden");
+            valid = false;
+          } else {
+            lastnameError.classList.add("hidden");
+          }
+
+          // Email
+          const email = document.getElementById("email");
+          const emailError = document.getElementById("emailError");
+          const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+          if (!email.value.match(emailPattern)) {
+            emailError.classList.remove("hidden");
+            valid = false;
+          } else {
+            emailError.classList.add("hidden");
+          }
+
+          // Phone
+          const phone = document.getElementById("phone");
+          const phoneError = document.getElementById("phoneError");
+          const phonePattern = /^[0-9]{7,15}$/;
+          if (!phone.value.match(phonePattern)) {
+            phoneError.classList.remove("hidden");
+            valid = false;
+          } else {
+            phoneError.classList.add("hidden");
+          }
+
+          // Subject
+          const subject = document.getElementById("subject");
+          const subjectError = document.getElementById("subjectError");
+          if (subject.value.trim() === "") {
+            subjectError.classList.remove("hidden");
+            valid = false;
+          } else {
+            subjectError.classList.add("hidden");
+          }
+
+          // Message
+          const message = document.getElementById("message");
+          const messageError = document.getElementById("messageError");
+          if (message.value.trim() === "") {
+            messageError.classList.remove("hidden");
+            valid = false;
+          } else {
+            messageError.classList.add("hidden");
+          }
+
+          // ✅ Prevent submission if invalid
+          if (!valid) {
+            e.preventDefault();
+          }
+        });
+    </script>
     <script src="./src/script.js"></script>
   </body>
 </html>
