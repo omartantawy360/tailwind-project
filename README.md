@@ -66,8 +66,9 @@ npm run dev
 ├── fontawesome-free-7.1.0-web/   # Local FontAwesome web fonts and assets
 ├── images/                        # UI images and background graphics
 ├── src/
-│   ├── style.css                 # Source CSS containing Tailwind directives
-│   └── output.css                # Compiled production CSS
+│   ├── input.css                 # Tailwind source file (imports Tailwind CSS)
+│   ├── style.css                 # Custom non-Tailwind styles loaded directly
+│   └── output.css                # Compiled Tailwind CSS utilities
 ├── index.html                    # Main HTML page
 ├── package.json                  # NPM packages configurations
 └── README.md                     # Documentation
